@@ -1,0 +1,256 @@
+<div class="my-3 my-md-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form action="#" method="post" class="card">
+          <div class="card-header">
+            <h3 class="card-title">อัพเดทสินค้า</h3><button type="submit" class="btn btn-primary ml-auto">บันทึก</button>
+          </div>
+          <div class="card-body">
+
+
+
+            <input type="hidden" name="action" value="save">
+
+
+
+            <div class="card-body">
+              <div class="row">
+
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="form-group">
+                    {img}
+                  </div>
+                  <div class="form-group">
+                    <div class="form-label">แนบรูป</div>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" name="photo">
+                      <label class="custom-file-label">เลือกรูป</label>
+                    </div>
+
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">ลิ้ง</label>
+                    <input type="text" class="form-control" name="url" placeholder="{url}" value="{url}">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">รายละเอียดสินค้า</label>
+                    <textarea class="form-control" name="detail" rows="6">{detail}</textarea>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <fieldset class="form-fieldset">
+                    <div class="form-group">
+                      <label class="form-label">รหัส Barcode</label>
+                      <a href="https://www.google.co.th/search?q={barcode}&source=lnms&tbm=isch&sa=X&biw=1920&bih=920" target="_blank">
+                        <img alt="Barcoded value {barcode}" src="http://bwipjs-api.metafloor.com/?bcid=code128&text={barcode}&scaleX=5&scaleY=1&rotate=N&includetext" height=40">
+                      </a>
+                      <input type="hidden" class="form-control" name="barcode" placeholder="{barcode}" value="{barcode}">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">ชื่อสินค้า<span class="form-required">*</span></label>
+                      <input type="text" class="form-control" name="name" value="{name}" />
+                    </div>
+                    <div class="form-group mb-0">
+                      <label class="form-label">ราคา</label>
+                      <table class="table">
+                        <tr>
+                          <td>ราคาใหม่: </td>
+                          <td style="width:100px;"><input type="text" class="form-control" name="nprice" value="{nprice}" /></td>
+                          <td>บาท</td>
+                        </tr>
+                        <tr>
+                          <td>ราคาเก่า : </td>
+                          <td style="width:100px;"><input type="text" class="form-control" name="bprice" value="{bprice}" /></td>
+                          <td> บาท</td>
+                        </tr>
+                      </table>
+
+
+
+
+
+
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">จำนวนสินค้า</label>
+
+                    <!-- START BLOCK : STOCK -->
+                      <div class="selectgroup">
+                        <!-- START BLOCK : STOCKLIST -->
+                        <label class="selectgroup-item">
+                          <input type="radio" name="items_stock" value="{i}" class="selectgroup-input">
+                          <span class="selectgroup-button">{i}</span>
+                        </label>
+                        <!-- END BLOCK : STOCKLIST -->
+                      </div>
+                    <!-- END BLOCK : STOCK -->
+
+
+
+
+
+                    </div>
+
+
+
+                    <div class="form-group">
+                      <label class="form-label">อย. [<a href="http://pca.fda.moph.go.th/service.php" target='_blank'>ตรวจ</a>]<span class="form-required">*</span></label>
+                      <input type="text" class="form-control" name="aoryor" value="{aoryor}" />
+                    </div>
+                  </fieldset>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="form-group">
+                    <div class="form-label">ประเภท</div>
+                      <div class="custom-switches-stacked">
+
+
+                        <!-- START BLOCK : GROUPS -->
+                        <label class="custom-switch">
+                          <input type="radio" name="series" value="{id}" class="custom-switch-input" {series1}>
+                          <span class="custom-switch-indicator"></span>
+                          <span class="custom-switch-description">{group_name}</span>
+                        </label>
+                        <!-- END BLOCK : GROUPS -->
+
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+                  </div>
+                </div>
+
+              </div>
+
+
+        <hr>
+
+                    <div class="card">
+                      <div class="card-header">
+                        <h3 class="card-title">การซื้อ</h3>
+                      </div>
+                      <div id="chart-development-activity" style="height: 10rem"></div>
+                      <div class="table-responsive">
+
+                        <table class="table card-table table-striped table-vcenter">
+                          <thead>
+                            <tr>
+                              <th colspan="2">ผู้บันทึก</th>
+                              <th>สถานะ รับเข้า/เช็คสต๊อก</th>
+                              <th>จำนวน</th>
+                              <th>บันทึกเมือ</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+
+                          <!-- START BLOCK : LIST -->
+                            <tr>
+                              <td class="w-1"><span class="avatar" style="background-image: url({avatar})"></span></td>
+                              <td>{fullname}</td>
+                              <td>{status}</td>
+                              <td>{items}</td>
+                              <td class="text-nowrap">{addTimeDate}</td>
+                              <td class="w-1"><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
+                            </tr>
+                          <!-- END BLOCK : LIST -->
+
+
+
+                          </tbody>
+                        </table>
+
+
+
+
+
+                      </div>
+                    </div>
+
+
+
+                    <script>
+                      require(['c3', 'jquery'], function(c3, $) {
+                        $(document).ready(function() {
+                          var chart = c3.generate({
+                            bindto: '#chart-development-activity', // id of chart wrapper
+                            data: {
+                              columns: [
+                                // each columns data
+                                ['data1', 0, 5, 1, 2, 7, 5, 6, 8, 24, 7, 12, 5, 6, 3, 2, 2, 6, 30, 10, 10, 15, 14, 47, 65, 55]
+                              ],
+                              type: 'area', // default type of chart
+                              groups: [
+                                ['data1', 'data2', 'data3']
+                              ],
+                              colors: {
+                                'data1': tabler.colors["red"]
+                              },
+                              names: {
+                                // name of each serie
+                                'data1': 'การซื้อต่อเดือน'
+                              }
+                            },
+                            axis: {
+                              y: {
+                                padding: {
+                                  bottom: 0,
+                                },
+                                show: false,
+                                tick: {
+                                  outer: false
+                                }
+                              },
+                              x: {
+                                padding: {
+                                  left: 0,
+                                  right: 0
+                                },
+                                show: false
+                              }
+                            },
+                            legend: {
+                              position: 'inset',
+                              padding: 0,
+                              inset: {
+                                anchor: 'top-left',
+                                x: 20,
+                                y: 8,
+                                step: 10
+                              }
+                            },
+                            tooltip: {
+                              format: {
+                                title: function(x) {
+                                  return '';
+                                }
+                              }
+                            },
+                            padding: {
+                              bottom: 0,
+                              left: -1,
+                              right: -1
+                            },
+                            point: {
+                              show: false
+                            }
+                          });
+                        });
+                      });
+                    </script>
+
+
+
+        </form>
+      </div>
+  </div>

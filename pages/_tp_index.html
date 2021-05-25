@@ -1,0 +1,68 @@
+
+			<div class="col-md-12">
+					<!-- BEGIN BORDERED TABLE PORTLET-->
+					<div class="portlet box green">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-photo"></i> List Pages
+							</div>
+
+						</div>
+						<div class="portlet-body">
+
+                                            
+                   <!-- START BLOCK : SAVE -->
+								<div class="form-body">
+									<div class="form-group">                   
+                                          <div class="alert alert-success">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                                                        Edit Show Slide Index to <strong>Success!</strong>. {strMessage}
+                                         </div>
+									</div>
+								</div>                   
+                  <!-- END BLOCK : SAVE -->  
+                   <!-- START BLOCK : REMOVE -->
+								<div class="form-body">
+									<div class="form-group">                   
+                                          <div class="alert alert-success">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                                                        Remove Slide Index to <strong>Success!</strong>. {strMessage}{1}
+                                         </div>
+									</div>
+								</div>                   
+                  <!-- END BLOCK : REMOVE -->   
+                     
+								<!--<div class="form-body">
+									<div class="form-group">  
+                            <a href="new.php" class="btn green">
+											New Pages <i class="fa fa-plus"></i>
+											</a>  
+									</div>
+								</div>  -->                                                 
+                                                                                                                            
+							<div class="table-scrollable">
+								<table class="table table-bordered table-hover">
+								<thead>
+								<tr>
+									<th width="5%">No.</th>
+									<th>Pages</th>
+									<th width="5%"></th>
+                                    <!--<th width="5%"></th>-->
+								</tr>
+								</thead>
+								<tbody>
+  <!-- START BLOCK : DATA -->
+								<tr>
+									<td>{no}</td>
+									<td>{page}</td>
+									<td><a href="edit.php?id={id}"><i class="fa fa-edit" style="font-size:20px;"></i></a></td>
+                                    <!--<td><a href="?action=delete&id={id}" onclick="return confirm('Do you want to delete ?')"><i class="fa fa-trash-o" style="font-size:20px;"></i></a></td>-->
+								</tr>
+  <!-- END BLOCK : DATA -->                                
+								</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- END BORDERED TABLE PORTLET-->
+				</div>                  

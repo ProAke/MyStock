@@ -1,0 +1,154 @@
+
+<div class="col-md-12 ">
+					<!-- BEGIN SAMPLE FORM PORTLET-->
+					<div class="portlet box green ">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-edit"></i> Edit Pages
+							</div>
+						</div>
+
+						<div class="portlet-body form">
+                   <!-- START BLOCK : SAVE -->
+								<div class="form-body">
+									<div class="form-group">                   
+                                          <div class="alert alert-success">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                                                        Edit Pages to <strong>Success!</strong>. {strMessage}
+                                         </div>
+									</div>
+								</div>                   
+                  <!-- END BLOCK : SAVE -->  
+                   <!-- START BLOCK : REMOVE -->
+								<div class="form-body">
+									<div class="form-group">                   
+                                          <div class="alert alert-success">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                                                        Remove image to <strong>Success!</strong>. {strMessage}{1}
+                                         </div>
+									</div>
+								</div>                   
+                  <!-- END BLOCK : REMOVE -->                         
+                  <!-- START BLOCK : FORM -->                                 
+							<form class="form-horizontal" role="form" action="edit.php?id={id}" method="post" enctype="multipart/form-data">
+                                <input name="page" type="hidden" id="page"  value="{page}" size="80" class="form-control" />
+								<!-- <div class="form-body">
+									<div class="form-group">
+										<label class="col-md-3 control-label">Menu Name</label>
+										<div class="col-md-9">
+                                            <input name="menu" type="text" id="menu" placeholder="Enter Name"  value="{menu}" size="80" class="form-control" />
+										</div>
+									</div>
+								</div>   -->
+                                
+                                <div class="form-body">
+									<div class="form-group">
+										<label class="col-md-3 control-label">Title</label>
+										<div class="col-md-9">
+                                            <input name="title" type="text" id="title" placeholder="Enter Title"  value="{title}" size="80" class="form-control" />
+										</div>
+									</div>
+								</div>                               
+
+								<div class="form-body">
+									<div class="form-group">
+										<label class="col-md-3 control-label">Key Photo </label>
+										<div class="col-md-9">
+                                          
+                                          {img1}<br />
+                          <input type="file" name="img1" id="img1" /> 
+                          [ Size : W : 1427 x H : 241 pixel ] {remove1}
+										</div>
+									</div>
+								</div>                                  
+
+								<div class="form-body">
+									<div class="form-group">
+										<label class="col-md-3 control-label">SEO Keyword <br />(key1,key2,....)</label>
+										<div class="col-md-9">
+                                          <textarea name="keyword" class="form-control" rows="5" id="keyword" >{keyword}</textarea>
+										</div>
+									</div>
+								</div>                                  
+
+								<div class="form-body">
+									<div class="form-group">
+										<label class="col-md-3 control-label">SEO Description </label>
+										<div class="col-md-9">
+                                          <textarea name="description" class="form-control" rows="5" id="description" >{description}</textarea>
+										</div>
+									</div>
+								</div>                                 
+
+								<!--<div class="form-body">
+									<div class="form-group">
+										<label class="col-md-3 control-label">Detail </label>
+										<div class="col-md-9">
+                                          <textarea name="detail" class="ckeditor form-control" rows="5" id="detail" >{detail}</textarea>
+										</div>
+									</div>
+								</div>-->                                  
+
+                                
+                                <div class="form-body">
+									<div class="form-group">
+										<label class="col-md-3 control-label">Facebook Title</label>
+										<div class="col-md-9">
+                                            <input name="gotitle" type="text" id="gotitle" placeholder="Enter Title"  value="{gotitle}" size="80" class="form-control" />
+										</div>
+									</div>
+								</div>                               
+
+								<div class="form-body">
+									<div class="form-group">
+										<label class="col-md-3 control-label">Facebook Image thumb </label>
+										<div class="col-md-9">
+                                          
+                                          {img2}<br />
+                          <input type="file" name="img2" id="img2" />
+                        (show on facebook) กว้างไม่เกิน 300 pixel  จะแสดงตอนแชร์ {remove2}
+										</div>
+									</div>
+								</div>   
+ 
+                                <div class="form-body">
+									<div class="form-group">
+										<label class="col-md-3 control-label">Facebook Site Name</label>
+										<div class="col-md-9">
+                                            <input name="gositename" type="text" id="gositename" placeholder="Enter Site Name"  value="{gositename}" size="80" class="form-control" />
+										</div>
+									</div>
+								</div>  
+                                
+                                <div class="form-body">
+									<div class="form-group">
+										<label class="col-md-3 control-label">Facebook Type</label>
+										<div class="col-md-9">
+                                            <input name="gotype" type="text" id="gotype" placeholder="Enter Type"  value="{gotype}" size="80" class="form-control" />
+										</div>
+									</div>
+								</div>                                   
+
+
+
+                                
+                                
+                            <input name="action" type="hidden" id="action" value="save" />
+                            <input name="id" type="hidden" id="id" value="{id}" />
+                            <input name="no" type="hidden" id="no" value="{no}" />
+                            <input name="lag" type="hidden" id="lag" value="{no}" />
+								<div class="form-actions fluid">
+									<div class="col-md-offset-3 col-md-9">
+										<button type="submit" class="btn green">Submit</button>
+										<button type="button" class="btn default">Cancel</button>
+									</div>
+								</div>
+							</form>
+                            <!-- END BLOCK : FORM -->
+						</div>
+					</div>
+					<!-- END SAMPLE FORM PORTLET-->
+
+				</div>
+         
+                  
