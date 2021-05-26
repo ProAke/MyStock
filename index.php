@@ -20,8 +20,9 @@ include_once("./include/class.TemplatePower.inc.php");
 
 
 $code= isset($_GET['code']) ? $_GET['code'] : '';
-if(!isset($code)){
+if($code !=""){
 $query = "SELECT * FROM `$tableBarcode` WHERE `BARCODE`='".$code."'";
+echo $query;
 $result = $conn->query($query);
 if ($line= $result->fetch_assoc()) {
 				$num = $line['NUM']+1;

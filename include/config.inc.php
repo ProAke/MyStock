@@ -19,10 +19,9 @@ Copyright (C) 2018-2021, VPS Live Digital togethers, all rights reserved.
 	    "charset"=>"utf8"
 	);
 */
-$ipaddress = $_SERVER['REMOTE_ADDR'];
+$ipaddress = $_SERVER['SERVER_ADDR'];
 
-echo $ipaddress;
-if($paddresss=='127.0.0.1'){
+if($ipaddress=='127.0.0.1'){
 	$db_config=array(
 	    "host"=>"103.246.18.79",
 	    "user"=>"uarea_office",
@@ -85,20 +84,20 @@ $status=false;
 // MySQL Table
 $tableLag 							= "kgu_lag";
 $tableAdmin 						= "kgu_admin_user";
-$tableAdminMenu 				= "kgu_admin_menu";
-$tableMessage 					= "kgu_message";
+$tableAdminMenu 					= "kgu_admin_menu";
+$tableMessage 						= "kgu_message";
 $tableMember 						= "kgu_member";
-$tableMemberAddress			= "kgu_member_address";
-$tableMailMessage 			= "kgu_mail_message";
+$tableMemberAddress					= "kgu_member_address";
+$tableMailMessage 					= "kgu_mail_message";
 $tableBarcode						= "kgu_products";
-$tableBarcodelog				= "kgu_products_log";
+$tableBarcodelog					= "kgu_products_log";
 $tableGroup							= "kgu_groups";
-$tableManufacturer			= "kgu_Manufacturer";
-$tableBusinessType			= "kgu_Business_Type";
-$tableProvince					=	"province";
-$tableAmphur						=	"amphur";
-$tableDistrict					=	"district";
-$tableCustomers					= "kgu_customers";
+$tableManufacturer					= "kgu_Manufacturer";
+$tableBusinessType					= "kgu_Business_Type";
+$tableProvince						= "province";
+$tableAmphur						= "amphur";
+$tableDistrict						= "district";
+$tableCustomers						= "kgu_customers";
 $tableSetting						= "kgu_setting";
 
 
