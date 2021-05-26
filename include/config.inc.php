@@ -19,7 +19,10 @@ Copyright (C) 2018-2021, VPS Live Digital togethers, all rights reserved.
 	    "charset"=>"utf8"
 	);
 */
+$ipaddress = $_SERVER['REMOTE_ADDR'];
 
+echo $ipaddress;
+if($paddresss=='127.0.0.1'){
 	$db_config=array(
 	    "host"=>"103.246.18.79",
 	    "user"=>"uarea_office",
@@ -27,6 +30,19 @@ Copyright (C) 2018-2021, VPS Live Digital togethers, all rights reserved.
 	    "dbname"=>"uarea_office",
 	    "charset"=>"utf8"
 	);
+
+}else{
+
+	$db_config=array(
+	    "host"=>"localhost",
+	    "user"=>"fufudev_mystock",
+	    "pass"=>"fc0*2c7F",
+	    "dbname"=>"fufudev_mystock",
+	    "charset"=>"utf8"
+	);
+
+}
+
 
 	
 

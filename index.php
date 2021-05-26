@@ -83,7 +83,7 @@ while($line= $result->fetch_assoc()) {
 	$no++;
 	$tpl->newBlock("DATA");
 	$tpl->assign("no",$line['ID']);
-
+	$tpl->assign("id",$line['ID']);
 
 	$tpl->assign("name",$line['NAME']);
 	$tpl->assign("barcode",$line['BARCODE']);

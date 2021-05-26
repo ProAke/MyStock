@@ -9,12 +9,12 @@ include_once("./include/class.TemplatePower.inc.php");
 
 $barcode = isset($_GET['barcode']) ? $_GET['barcode'] : '';
 $action = isset($_GET['action']) ? $_GET['action'] : '';
-
+$id = isset($_GET['id']) ? $_GET['id'] : '';
 
 if($action=='del' && !isset($barcode){
 
 
-	$query = "DELETE FROM `$tableBarcode` WHERE `BARCODE`='".$barcode."'";
+	$query = "DELETE FROM `$tableBarcode` WHERE `ID`='".$id."'";
 	$result = $conn->query($query);
 
 	@unlink("../../upload/begin/full/".$_GET['file']);
@@ -24,8 +24,11 @@ if($action=='del' && !isset($barcode){
 	exit;
 
    }
+
 }else{
 
+	header('Location: index.php' );
+	exit;
 
 }
 
