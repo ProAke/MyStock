@@ -9,7 +9,8 @@ Copyright (C) 2018-2021, VPS Live Digital togethers, all rights reserved.
  *****************************************************************/
 
 
-$code = isset($_GET['code']) ? $_GET['code'] : '';
+//$code = isset($_GET['code']) ? $_GET['code'] : '';
+if ($_GET['liff.state']) {
 
-echo $code . "<<< <hr><br>";
-echo file_get_contents("php://input");
+	echo "Line >>" . $_GET['liff.state'];
+}
