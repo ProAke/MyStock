@@ -11,9 +11,5 @@ Copyright (C) 2018-2021, VPS Live Digital togethers, all rights reserved.
 
 //$code = isset($_GET['code']) ? $_GET['code'] : '';
 
-$code = isset($_GET['liff.state']) ? $_GET['liff.state'] : '';
 
-
-
-
-echo "Line >>" . $code;
+echo "Line >>" . $_GET['liff.state'];
