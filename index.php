@@ -16,6 +16,7 @@ include_once("./include/class.TemplatePower.inc.php");
 
 
 $code = str_replace("/index.php?liff.state=%3Fcode%3D", "", $_SERVER['REQUEST_URI']);
+
 //$code = isset($_GET['code']) ? $_GET['code'] : '';
 if ($code != "") {
     $query = "SELECT * FROM `$tableBarcode` WHERE `BARCODE`='" . $code . "'";
