@@ -16,11 +16,22 @@ include_once("./include/class.TemplatePower.inc.php");
 
 
 $code = str_replace("/index.php?liff.state=%3Fcode%3D", "", $_SERVER['REQUEST_URI']);
+$code2 =  substr($code, 0, 10);
+if ($code == "/index.php") {
+    $code = "";
+}
+if ($code2 == "/index.php") {
+    $code = "";
+}
+if ($code == "/") {
+    $code = "";
+}
+
 
 //$code = isset($_GET['code']) ? $_GET['code'] : '';
 if ($code != "") {
     $query = "SELECT * FROM `$tableBarcode` WHERE `BARCODE`='" . $code . "'";
-    echo $query;
+    //echo $query;
     $result = $conn->query($query);
     if ($line = $result->fetch_assoc()) {
         $num = $line['NUM'] + 1;
@@ -38,7 +49,7 @@ if ($code != "") {
 
 ?>
         <script type="text/javascript">
-            window.close();
+            liff.closeWindow()
         </script>
     <?php
     } else {
@@ -56,7 +67,7 @@ if ($code != "") {
 
     ?>
         <script type="text/javascript">
-            window.close();
+            liff.closeWindow()
         </script>
 <?php
     }
